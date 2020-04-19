@@ -30,7 +30,7 @@ data_clean <- data %>%
   mutate(year = str_remove(year, "x")) %>% 
   spread(indicator_name, value) %>% 
   clean_names() %>% 
-  filter(as.numeric(year) <= 2015) %>% 
+  filter(as.numeric(year) <= 2014) %>% 
   rename(gdp_per_capita_current_usd = gdp_per_capita_current_us) %>% 
   mutate(country_name = str_replace(country_name, "Russian Federation", "Russia") %>% 
                                     str_replace("Russian Federation", "Russia") %>% 
